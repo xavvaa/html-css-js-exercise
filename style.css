@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background: linear-gradient(#ffffff45, rgba(255, 255, 255, 0.5)), url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.custom-navbar {
+    background-image: linear-gradient(#ffcff5, #ffcff5,rgba(255, 255, 255, 0));
+}
+.custom-bg-color {
+    background-color: #ffcff5;
+}
+.navbar-nav .nav-link {
+    transition: color 0.3s, text-decoration 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #ff57db;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.349);
+    transition: all 0.3s ease;
+}
+.btn-outline-success {
+    color: #aa3791;
+    border-color: #ff57db;
+}
+.btn-outline-success:hover {
+    font-weight: bold;
+    color: #ffffff; 
+    background-color: #aa3791; 
+    border-color: #ff57db; 
+}
+hr {
+    width: 20%;            
+    margin: 50px auto;    
+    border: none;        
+    height: 8px;           
+    background-color: #ff57db; 
+}
+.btn-primary {
+    background-color: #ffcff5; 
+    color: black; 
+    border-color: #ffcff5; 
+}
+.btn-primary:hover {
+    font-weight: bold;
+    background-color: #aa3791; 
+    border-color: #ffcff5;
+}
+.footer{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0),#ffcff5, #ffcff5);
+}

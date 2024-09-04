@@ -1,0 +1,211 @@
+<!------------- COMIA, HANNAH NICOLE L.------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comia Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!------------- NAVIGATION BAR ------------->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/CITE LOGO.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                <b class="ms-2">Comia's Portfolio</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" onsubmit="searchSections(event)">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>                
+            </div>
+        </div>
+    </nav>
+    
+    <!------------- PORTFOLIO ------------->
+    <div class="container mt-5" id="portfolio">
+        <h2 class="text-center mb-4"><b>Portfolio</b></h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" id="card1">
+                    <img src="images/1.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title project-title">Café-ine</h5>
+                        <p class="card-text">Café-ine is a cozy website that captures the essence of a beloved coffee shop, showcasing its diverse menu and rich coffee culture.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal" onclick="changeCardColor(this)">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" id="card2">
+                    <img src="images/2.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title project-title">Route Trace</h5>
+                        <p class="card-text">Route Trace is a mobile and website application that focuses on mitigating commuters doubts regarding vehicle arrivals.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal" onclick="changeCardColor(this)">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" id="card3">
+                    <img src="images/3.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title project-title">Lo-La</h5>
+                        <p class="card-text">Lo-La is a digital companion designed for the elderly and those with hearing or visual impairments that will help them navigate their daily lives.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal" onclick="changeCardColor(this)">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!------------- MODALS ------------->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project1ModalLabel">Café-ine</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Café-ine is a delightful and cozy website dedicated to a charming coffee shop where coffee lovers can explore a wide range of beverages, from classic espresso shots to unique seasonal blends. The website offers a virtual experience that captures the warm, inviting atmosphere of the café, making visitors feel like they're stepping into a local favorite. Whether you're a regular customer or a first-time visitor, Café-ine provides everything you need to know about the coffee shop, including its menu, special offers, and the story behind its inception. It’s not just about coffee; it’s about community, comfort, and a shared love for the art of brewing the perfect cup.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project2ModalLabel">Route Trace</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Route Trace combines transport options and gives you the best route with live arrival times. Get step-by-step directions with live guidance as you travel! This application focuses on removing doubts about the arrival time and availability of transport vehicles, more specifically, a UV express and a bus.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project3ModalLabel">Lo-La</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lo-La is a mobile application designed for the elderly and the hearing or visually impaired, providing assistance to navigate daily tasks, enhancing accessibility and improving quality of life. By leveraging advancements in information technology and addressing key concerns such as medication reminders, battery consumption, and language accessibility, the proposed digital companion endeavors to provide meaningful support that aligns with the evolving needs and preferences of aging individuals and individuals with impairments in the digital age.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!------------- CONTACT ------------->
+    <div class="container mt-5" id="contact">
+        <h2 class="text-center mb-4"><b>Contact Me</b></h2>
+        <form onsubmit="submitContactForm(event)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>    
+
+    <!------------- FOOTER ------------->
+    <section class="footer">
+        <h2>About me</h2>
+        <p><b>Comia, Hannah Nicole L.<br>C3A</b></p>
+    </section>
+
+    <!------------- BOOTSRAP JS ------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!------------- JS TO CHANGE BG COLOR, FOR SEARCH, FOR SUBMISSION------------->
+    <script>
+        function changeCardColor(button) {
+            const card = button.closest('.card');
+            card.classList.add('custom-bg-color');
+            button.dataset.cardId = card.id;
+        }
+        
+        function removeCardColor(cardId) {
+            const card = document.getElementById(cardId);
+            if (card) {
+                card.classList.remove('custom-bg-color');
+            }
+        }
+        
+        document.getElementById('project1Modal').addEventListener('hide.bs.modal', function () {
+            removeCardColor('card1');
+        });
+        
+        document.getElementById('project2Modal').addEventListener('hide.bs.modal', function () {
+            removeCardColor('card2');
+        });
+        
+        document.getElementById('project3Modal').addEventListener('hide.bs.modal', function () {
+            removeCardColor('card3');
+        });
+        
+        function searchSections(event) {
+        event.preventDefault(); 
+        const query = document.getElementById('search-input').value.toLowerCase();
+
+        if (query.includes('portfolio')) {
+            document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+        } else if (query.includes('contact')) {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        } else {
+            alert('Error, not found. Please search for "Portfolio" or "Contact"');
+        }
+        }
+        function submitContactForm(event) {
+        event.preventDefault();
+        alert('Your message has been submitted successfully.');
+        event.target.reset();
+        }
+
+    </script>
+
+</body>
+</html>
